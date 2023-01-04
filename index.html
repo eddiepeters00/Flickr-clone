@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="./lib/anime.min.js" defer></script>
+    <script src="./js/script.js" defer></script>
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="./css/style.css">
+
+    <title>Image-searcher</title>
+</head>
+
+<body>
+    <header>
+        <section class="search-container" id="search-container">
+            <h3 class="logo">Image-Finder</h3>
+            <b class="sub-heading">Search for images taken all across the globe</b>
+
+            <form action="">
+                <b class="error-text" id="search-error-text">(Search-field is empty!)</b>
+                <span class="search-bar">
+                    <span class="material-symbols-outlined">search</span>
+                    <input type="text" placeholder="Search for images" id="search-input">
+                </span>
+
+                <div class="select-container">
+                    <span>
+                        <div class="amount-text-container">
+                            <label for="amount-input">Number of images:</label>
+                            <b class="error-text" id="amount-error-text">(Max 500 / page)</b>
+                        </div>
+                        <input type="number" min="0" max="500" id="amount-input">
+                    </span>
+
+                    <span>
+                        <label for="size-selection">Choose size</label>
+                        <select name="Sizes" id="size-selection">
+                            <option value="w">Small</option>
+                            <option value="z">medium</option>
+                            <option value="b">large</option>
+                        </select>
+                    </span>
+
+                    <span>
+                        <label for="sort-selection">Sort by:</label>
+                        <select name="sort-selection" id="sort-selection">
+                            <option value="date-posted-asc" id="date">date</option>
+                            <option value="relevance" id="relevance">relevance</option>
+                            <option value="interestingness-asc" id="interestingness">interestingness</option>
+                        </select>
+                    </span>
+                </div>
+
+                <div class="search-button-container">
+                    <input type="button" value="Search" id="search-button">
+                </div>
+            </form>
+        </section>
+    </header>
+
+    <aside class="loading-container" id="loading-container">
+        <div>
+            <span class="loading-letter">L</span>
+            <span class="loading-letter">O</span>
+            <span class="loading-letter">A</span>
+            <span class="loading-letter">D</span>
+            <span class="loading-letter">I</span>
+            <span class="loading-letter">N</span>
+            <span class="loading-letter">G</span>
+            <span class="loading-letter">.</span>
+            <span class="loading-letter">.</span>
+            <span class="loading-letter">.</span>
+        </div>
+    </aside>
+
+    <main class="image-feed-container"></main>
+
+    <footer class="page-button-container">
+        <button class="pre-page-button" id="pre-page-button">Previus page</button>
+        <button class="next-page-button" id="next-page-button">Next page</button>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,202 @@
+:root{
+    --background: hsl(225, 6%, 13%);
+    --white: hsl(0, 0%, 96%);
+    --error-text: hsl(0, 100%, 50%); 
+
+    --small-background-url: url(../images/overgrown-green-staircase-forest-small.jpg);
+    --medium-background-url: url(../images/overgrown-green-staircase-forest-medium.jpg);
+    --large-background-url: url(../images/overgrown-green-staircase-forest-large.jpg);
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    outline: none;
+}
+
+body {
+    background-color: var(--background);
+}
+
+header {
+    width: 100%;
+}
+
+.search-container {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 1rem;
+    background-image: var(--small-background-url), linear-gradient(147deg, #ca8312, #2b81bb);
+    background-blend-mode: luminosity;
+    background-repeat: none;
+    background-size: cover;
+    background-position: center;
+}
+
+.search-container form {
+    width: 80%;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: row nowrap;
+    background-color: var(--white);
+    border-radius: 1rem;
+    border: 1px solid black;
+}
+
+.search-bar input {
+    width: 100%;
+    margin-right: 5%;
+    border: 0;
+    background-color: var(--white);
+}
+
+.search-bar:hover {
+    box-shadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 3px;
+}
+
+
+.logo {
+    color: var(--white);
+    font-size: 10vw;
+}
+
+.sub-heading {
+    text-align: center;
+    color: var(--white);
+    font-size: 5vw;
+    margin-bottom: 2rem;
+}
+
+.select-container {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
+    margin-top: 2rem;
+}
+
+.select-container span {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    margin: 0.5rem;
+}
+
+label {
+    color: var(--white);
+    white-space: nowrap;
+}
+
+.amount-text-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.error-text {
+    display: none;
+    color: var(--error-text);
+    -webkit-text-stroke-width: 0.2px;
+    -webkit-text-stroke-color: var(--white);
+}
+
+.search-button-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.search-button-container input{
+    padding: 0.5rem;
+}
+
+.image-feed-container {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.image-feed-container img {
+    flex-basis: 100%;
+    max-width: 100%;
+    object-fit: contain;
+    object-position: center;
+    padding: 1rem;
+}
+
+/*Image animation on click*/
+.image-clicked {
+    position: fixed;
+    max-width: 100%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.loading-container {
+    display: none;
+}
+
+.loading-container div {
+    display: flex;
+    justify-content: center;
+    color: var(--white);
+    font-size: 6vw;
+    font-weight: bold;
+    margin-top: 20vh;
+}
+
+.page-button-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.page-button-container button {
+    display: none;
+    padding: 0.5rem;
+}
+
+
+@media screen and (min-width: 750px) {
+    .search-container{
+        background-image: var(--medium-background-url), linear-gradient(147deg, #ca8312, #2b81bb);
+    }
+
+    .logo {
+        font-size: 6vw;
+    }
+
+    .sub-heading {
+        font-size: 3vw;
+    }
+
+    .select-container span {
+        flex-basis: 25%;
+    }
+
+    .image-feed-container img {
+        max-width: 50%;
+        flex-basis: 50%;
+    }
+
+    .error-text{
+        white-space: nowrap;
+    }
+}
+
+@media screen and (min-width: 1000) {
+    .search-container{
+        background-image: var(--large-background-url), linear-gradient(147deg, #ca8312, #2b81bb);
+    }
+
+    .image-feed-container img {
+        max-width: 100%/3;
+        flex-basis: 100%/3;
+    }
+}
