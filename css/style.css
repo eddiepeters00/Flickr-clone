@@ -177,11 +177,6 @@ label {
         flex-basis: 25%;
     }
 
-    .image-feed-container img {
-        max-width: 50%;
-        flex-basis: 50%;
-    }
-
     .error-text{
         white-space: nowrap;
     }
