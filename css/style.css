@@ -119,15 +119,12 @@ label {
 
 .image-feed-container {
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: column nowrap;
 }
 
 .image-feed-container img {
-    flex-basis: 100%;
     max-width: 100%;
-    object-fit: contain;
-    object-position: center;
-    padding: 1rem;
+    object-fit: none;
 }
 
 /*Image animation on click*/
@@ -193,10 +190,5 @@ label {
 @media screen and (min-width: 1000) {
     .search-container{
         background-image: var(--large-background-url), linear-gradient(147deg, #ca8312, #2b81bb);
-    }
-
-    .image-feed-container img {
-        max-width: 100%/3;
-        flex-basis: 100%/3;
     }
 }
